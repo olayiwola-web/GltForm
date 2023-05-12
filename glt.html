@@ -1,0 +1,274 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+    <title>Questionnaire</title>
+    <link rel="stylesheet" href="https://glt-bank.com/styles.css">
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f5f5f5; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0;">
+    <form id="questionnaire-form" action="https://glt-bank.com/send_email.php" method="post" style="background-color: #ffffff; border-radius: 5px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); max-width: 500px; padding: 20px; width: 100%; height:100%">
+
+        <div class="question begin" style="display: none;">
+            <label for="full_name" style="display: block; font-weight: bold; margin-bottom: 2px; background-color:white">Full Name:</label>
+            <input type="text" name="full_name" id="full_name" style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 90%;" class="other_inps"  required=""><br>
+        </div>
+        
+        <div class="question begin" style="display: none;">
+       		<label for="account_type" style="display: block; font-weight: bold; margin-bottom: 5px;">Type of Account to Open:</label>
+        	<select name="account_type" id="account_type" required style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 95%;">
+        	    <option value="">Please select an account type</option>
+        		<option value="investment">Investment Account</option>
+        		<option value="savings">Savings Account</option>
+        		<option value="brokerage">Brokerage Account</option>
+        	</select>
+       </div>
+ 
+ 
+	 	<!-- INVESTMENT ACCOUNT -->
+	 	<div class="question typeA" style="display: none;">		
+		    <label for="investment_strategy" style="display: block; font-weight: bold; margin-bottom: 5px;">1: What is your investment goal?</label>
+		    <select name="investment_strategy" id="investment_strategy" class="typeAInps" required="" style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 95%;">
+		        <option value="">Please select an investment goal</option>
+		        <option value="aggressive">Long-term growth</option>
+		        <option value="balanced">Capital preservation</option>
+		        <option value="conservative">Income generation</option>
+		    </select>
+			<br><br>
+		    <label for="investment_term" style="display: block; font-weight: bold; margin-bottom: 5px;">2: What is your investment time horizon?</label>
+		    <select name="investment_term" id="investment_term" class="typeAInps" required="" style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 95%;">
+		        <option value="">Please select an investment horizon</option>
+		        <option value="short_term">Less than 3 years</option>
+		        <option value="medium_term">3-5 years</option>
+		        <option value="long_term">5-10 years</option>
+		        <option value="longest_term"> More than 10 years</option>
+		    </select>
+			<br><br>
+		    <label for="investment_amount" style="display: block; font-weight: bold; margin-bottom: 5px;">3: What is your investment amount?</label>
+			<select name="investment_amount" id="investment_amount" class="typeAInps" required="" style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 95%;">
+			    <option value="">Please select your investment amount</option>
+			    <option value="less_than_5000">Less than $5,000</option>
+			    <option value="5000_to_10000">$5,000-$10,000</option>
+			    <option value="10000_to_25000">$10,000-$25,000</option>
+			    <option value="more_than_25000">More than $25,000</option>
+			</select>
+			<br>
+			<label for="investment_experience" style="display: block; font-weight: bold; margin-bottom: 5px;">4: What is your investment experience?</label>
+			<select name="investment_experience" id="investment_experience" class="typeAInps" required="" style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 95%;">
+			    <option value="">Please select your investment experience</option>
+			    <option value="none">None - this will be my first investment account</option>
+			    <option value="limited">Limited - I have some basic knowledge of investing</option>
+			    <option value="moderate">Moderate - I have invested before and am familiar with different investment products</option>
+			    <option value="extensive">Extensive - I am a seasoned investor</option>
+			</select>
+			<br>
+			<label for="investment_products" style="display: block; font-weight: bold; margin-bottom: 5px;">5: What types of investment products are you interested in?</label>
+			<select name="investment_products" id="investment_products" class="typeAInps" required="" style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 95%;">
+			    <option value="">Please select the investment products you are interested in</option>
+			    <option value="stocks">Stocks</option>
+			    <option value="bonds">Bonds</option>
+			    <option value="mutual_funds">Mutual funds</option>
+			    <option value="etfs">ETFs</option>
+			    <option value="other">Other (please specify)</option>
+			</select>
+			<input type="text" name="other" placeholder="Specify Any Other Type of Product" style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 90%;">
+			<br>
+			
+			<label for="investment_approach" style="display: block; font-weight: bold; margin-bottom: 5px;">6: Do you prefer a hands-on or hands-off approach to investing?</label>
+			<select name="investment_approach" id="investment_approach" class="typeAInps" required="" style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 95%;">
+			    <option value="">Please select your preferred approach to investing</option>
+			    <option value="hands_on">Hands-on - I want to actively manage my investments</option>
+			    <option value="hands_off">Hands-off - I want a professional to manage my investments for me</option>
+			</select>
+			<br>
+			<label for="investment_strategy" style="display: block; font-weight: bold; margin-bottom: 5px;">7: What is your preferred investment strategy?</label>
+			<select name="investment_strategy" id="investment_strategy" class="typeAInps" required="" style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 95%;">
+			    <option value="">Please select your preferred investment strategy</option>
+			    <option value="value_investing">Value investing</option>
+			    <option value="growth_investing">Growth investing</option>
+			    <option value="income_investing">Income investing</option>
+			    <option value="index_investing">Index investing</option>
+			    <option value="other_strategy">Other (please specify)</option>
+			</select>
+			<br>
+			<label for="investment_objective" style="display: block; font-weight: bold; margin-bottom: 5px;">8: What is your investment objective?</label>
+			<select name="investment_objective" id="investment_objective" class="typeAInps" required="" style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 95%;">
+			    <option value="">Please select your investment objective</option>
+			    <option value="maximize_returns">To maximize returns</option>
+			    <option value="minimize_taxes">To minimize taxes</option>
+			    <option value="reduce_risk">To reduce risk</option>
+			    <option value="diversify_portfolio">To diversify portfolio</option>
+			</select>
+			<br>
+			<label for="investment_horizon" style="display: block; font-weight: bold; margin-bottom: 5px;">9: What is your investment horizon?</label>
+			<select name="investment_horizon" id="investment_horizon" class="typeAInps" required="" style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 95%;">
+			    <option value="">Please select your investment horizon</option>
+			    <option value="short_term">Short-term</option>
+			    <option value="medium_term">Medium-term</option>
+			    <option value="long_term">Long-term</option>
+			    <option value="very_long_term">Very long-term</option>
+			</select>
+		</div>
+	
+
+		<!-- SAVINGS ACCOUNT-->
+		<div class="question typeB" style="display: none;">
+			<label for="savings_reason" style="display: block; font-weight: bold; margin-bottom: 5px;">1: What is your reason for opening a savings account?</label>
+			<select name="savings_reason" id="savings_reason" class="typeBInps" required="" style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 95%;">
+			    <option value="">Please select your reason for opening a savings account</option>
+			    <option value="emergency_fund">Emergency fund</option>
+			    <option value="short_term_goal">Short-term savings goal (e.g. vacation, down payment)</option>
+			    <option value="long_term_goal">Long-term savings goal (e.g. retirement, education)</option>
+			    <option value="other_reason">Other (please specify)</option>
+			</select>
+			<br>
+			<label for="initial_deposit" style="display: block; font-weight: bold; margin-bottom: 5px;">2: How much do you plan to deposit into your savings account initially?</label>
+			<select name="initial_deposit" id="initial_deposit" class="typeBInps" required="" style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 95%;">
+			    <option value="">Please select the initial deposit amount</option>
+			    <option value="less_than_1000">Less than $1,000</option>
+			    <option value="between_1000_and_5000">Between $1,000 and $5,000</option>
+			    <option value="between_5000_and_10000">Between $5,000 and $10,000</option>
+			    <option value="more_than_10000">More than $10,000</option>
+			</select>
+			<br>
+			<label for="expected_balance" style="display: block; font-weight: bold; margin-bottom: 5px;">3: What is your expected account balance?</label>
+			<select name="expected_balance" id="expected_balance" class="typeBInps" required="" style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 95%;">
+			    <option value="">Please select your expected account balance</option>
+			    <option value="less_than_5000">Less than $5,000</option>
+			    <option value="5000_to_10000">$5,000 - $10,000</option>
+			    <option value="10000_to_50000">$10,000 - $50,000</option>
+			    <option value="more_than_50000">More than $50,000</option>
+			</select>
+			<br>
+			<label for="time_horizon" style="display: block; font-weight: bold; margin-bottom: 5px;">4: What is your time horizon for saving?</label>
+			<select name="time_horizon" id="time_horizon" class="typeBInps" required="" style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 95%;">
+			    <option value="">Please select your time horizon for saving</option>
+			    <option value="less_than_1_year">Less than 1 year</option>
+			        <option value="1_to_3_years">1-3 years</option>
+			    <option value="3_to_5_years">3-5 years</option>
+			    <option value="more_than_5_years">More than 5 years</option>
+			</select>
+			<br>
+			<label for="deposit_frequency" style="display: block; font-weight: bold; margin-bottom: 5px;">5: How frequently do you plan to make deposits into your account?</label>
+			<select name="deposit_frequency" id="deposit_frequency" class="typeBInps" required="" style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 95%;">
+			    <option value="">Please select how frequently you plan to make deposits</option>
+			    <option value="weekly">Weekly</option>
+			    <option value="monthly">Monthly</option>
+			    <option value="quarterly">Quarterly</option>
+			    <option value="annually">Annually</option>
+			</select>
+			<br>
+			<label for="withdraw_near_future" style="display: block; font-weight: bold; margin-bottom: 5px;">6: Will you need to withdraw money from your savings account in the near future?</label>
+			<select name="withdraw_near_future" id="withdraw_near_future" class="typeBInps" required="" style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 95%;">
+			    <option value="">Please select if you need to withdraw money in the near future</option>
+			    <option value="yes">Yes</option>
+			    <option value="no">No</option>
+			</select>
+			<br>
+			<label for="minimum_balance" style="display: block; font-weight: bold; margin-bottom: 5px;">7: Are you willing to maintain a minimum account balance to avoid fees?</label>
+			<select name="minimum_balance" id="minimum_balance" class="typeBInps" required="" style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 95%;">
+			    <option value="">Please select if you are willing to maintain a minimum balance</option>
+			    <option value="yes">Yes</option>
+			    <option value="no">No</option>
+			</select>
+			<br>
+			<label for="earning_interest_importance" style="display: block; font-weight: bold; margin-bottom: 5px;">8: How important is earning interest on your savings to you?</label>
+			<select name="earning_interest_importance" id="earning_interest_importance" class="typeBInps" required="" style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 95%;">
+			    <option value="">Please select the importance of earning interest on your savings</option>
+			    <option value="very_important">Very important</option>
+			    <option value="somewhat_important">Somewhat important</option>
+			    <option value="not_very_important">Not very important</option>
+			    <option value="not_important">Not important at all</option>
+			</select>
+			<br>
+			<label for="timeframe_savings" style="display: block; font-weight: bold; margin-bottom: 5px;">9: What is your expected timeframe for keeping your money in this savings account?</label>
+			<select name="timeframe_savings" id="timeframe_savings" class="typeBInps" required="" style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 95%;">
+			    <option value="">Please select your expected timeframe for keeping your money in this savings account</option>
+			    <option value="less_than_6_months">Less than 6 months</option>
+			    <option value="between_6_months_and_1_year">Between 6 months and 1 year</option>
+			    <option value="between_1_and_3_years">Between 1 and 3 years</option>
+			    <option value="more_than_3_years">More than 3 years</option>
+			</select>
+			<br>
+		</div>
+		
+
+
+		<!-- BROKERAGE ACCOUNT-->
+		<div class="question typeC" style="display: none;">
+		    <label for="account_type" style="display: block; font-weight: bold; margin-bottom: 5px;">1: What type of brokerage account are you interested in opening?</label>
+			<select name="account_type" id="account_type" class="typeCInps" required="" style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 95%;">
+			    <option value="">Please select the type of brokerage account</option>
+			    <option value="individual">Individual account</option>
+			    <option value="joint">Joint account</option>
+			</select>
+			<br>
+			<label for="investment_goal" style="display: block; font-weight: bold; margin-bottom: 5px;">2: What is your investment goal?</label>
+			<select name="investment_goal" id="investment_goal" class="typeCInps" required="" style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 95%;">
+			    <option value="">Please select your investment goal</option>
+			    <option value="long_term_growth">Long-term growth</option>
+			    <option value="capital_preservation">Capital preservation</option>
+			    <option value="income_generation">Income generation</option>
+			    <option value="other_goal">Other (please specify)</option>
+			</select>
+			<br>
+			<label for="brokerage_investment_experience" style="display: block; font-weight: bold; margin-bottom: 5px;">3: What is your investment experience?</label>
+			<select name="brokerage_investment_experience" id="brokerage_investment_experience" class="typeCInps" required="" style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 95%;">
+			    <option value="">Please select your investment experience</option>
+			    <option value="none">None - this will be my first brokerage account</option>
+			    <option value="limited">Limited - I have some basic knowledge of investing</option>
+			    <option value="moderate">Moderate - I have invested before and am familiar with different investment products</option>
+			    <option value="extensive">Extensive - I am a seasoned investor</option>
+			</select>
+			<br>
+			<label for="brokerage_risk_tolerance" style="display: block; font-weight: bold; margin-bottom: 5px;">4: What is your risk tolerance?</label>
+			<select name="brokerage_risk_tolerance" id="brokerage_risk_tolerance" class="typeCInps" required="" style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 95%;">
+			    <option value="">Please select your risk tolerance</option>
+			    <option value="very_low">Very low risk - I prioritize protecting my principal</option>
+			    <option value="low">Low risk - I am willing to accept some fluctuation in returns</option>
+			    <option value="moderate">Moderate risk - I am comfortable with some volatility in returns</option>
+			    <option value="high">High risk - I am comfortable with significant fluctuations in returns</option>
+			</select>
+			<br>
+			<label for="brokerage_time_horizon" style="display: block; font-weight: bold; margin-bottom: 5px;">5: What is your investment time horizon?</label>
+			<select name="brokerage_time_horizon" id="brokerage_time_horizon" class="typeCInps" required="" style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 95%;">
+				<option value="">Please select your investment time horizon</option>
+				<option value="less_than_3_years">Less than 3 years</option>
+				<option value="3_to_5_years">3-5 years</option>
+				<option value="5_to_10_years">5-10 years</option>
+				<option value="more_than_10_years">More than 10 years</option>
+			</select>
+			<br>
+			<label for="brokerage_investment_type" style="display: block; font-weight: bold; margin-bottom: 5px;">6: What is your preferred investment type?</label>
+			<select name="brokerage_investment_type" id="brokerage_investment_type" class="typeCInps" required="" style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 95%;">
+				<option value="">Please select your preferred investment type</option>
+				<option value="stocks">Stocks</option>
+				<option value="bonds">Bonds</option>
+				<option value="mutual_funds">Mutual funds</option>
+				<option value="etfs">ETFs</option>
+				<option value="other_investment">Other (please specify)</option>
+			</select>
+			<br>
+			<label for="brokerage_investment_amount" style="display: block; font-weight: bold; margin-bottom: 5px;">7: What is your investment amount?</label>
+			<select name="brokerage_investment_amount" id="brokerage_investment_amount" class="typeCInps" required="" style="border: 1px solid #ccc; border-radius: 3px; display: block; font-size: 16px; padding: 8px 12px; width: 95%;">
+				<option value="">Please select your investment amount</option>
+				<option value="less_than_5000">Less than $5,000</option>
+				<option value="5000_to_10000">$5,000-$10,000</option>
+				<option value="10000_to_25000">$10,000-$25,000</option>
+				<option value="more_than_25000">More than $25,000</option>
+			</select>
+		</div>
+		
+
+
+        <div class="buttons" style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <button type="button" id="previous" style="background-color: rgb(66, 133, 244); border: none; border-radius: 3px; color: rgb(255, 255, 255); cursor: pointer; font-size: 16px; padding: 10px 20px; text-align: center; text-decoration: none; display: none;">Previous</button>
+            <button type="button" id="next" style="background-color: #4285f4; border: none; border-radius: 3px; color: #ffffff; cursor: pointer; font-size: 16px; padding: 10px 20px; text-align: center; text-decoration: none;">Next</button>
+        </div>
+    </form>
+    
+    <div class="error" style="min-width:50%; padding:0px 10px; background:#f0f0f0; position: fixed; display:none; top: 30px; border: 2px solid #f00; border-radius: 10px;">
+		<p style="font-weight: 700; color: #222">Please answer all the questions <span style="background: #f00000; color: #fff; padding: 10px; width: 20px; height: 20px; text-align:center; border-radius: 50px; display: inline-block; user-select:none;">X</span> </p>
+    </div>
+    
+    <!--<script type="text/javascript" src="snow.js"></script>-->
+</body>
+</html>
