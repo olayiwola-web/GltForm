@@ -150,7 +150,7 @@ function validateOther(otherInps){
 const alertElem = document.querySelector(".error")
 
 function showAlert(){
-	alertElem.style.display = "block"
+	alertElem.style.display = "flex"
 	setTimeout(function(){
 		alertElem.style.display = "none"
 	}, 1500)
